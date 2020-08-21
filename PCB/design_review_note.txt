@@ -1,0 +1,17 @@
+//1. Change backup labels to corresponding SWD signal names
+2.
+//3. Use PA9, 10(UART1) for boot loader/programming. Don't use UART3 because it may be muxed to other funtions.
+//4. Don't use 3mil ground plane, minimum 6mil ground
+5. Add ground to signal pins.
+//6. Use consistent header types.
+7. Vias under voltage regulator need to have solder mask
+//8. reset labels are different, change to the same label and connect them.
+//9. Mux is too close to the FTDI chip
+10. Add decoupling capacitors for the mux
+//11. Don't switch layer for the oscillator circuit and USB datalines
+//12. Add zener diode between VREF+ and GND.
+//13. Put Oscillator capacitors to top layer.
+//14. The resistors for the oscillator circuit are probably not needed.
+//15. Add decoupling capacitors between all power supplies and GND.
+//16. Reroute decoupling capacitors for the microcontroller. The electrical path is too far.
+change all caps to 0805
